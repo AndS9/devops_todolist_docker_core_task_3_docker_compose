@@ -3,7 +3,7 @@ networks:
     driver: bridge
 services:
   pythonapp:
-    image: todoapp:3.0.0
+    image: andriis9/todoapp:3.0.0
     build:
       context: .
       dockerfile: Dockerfile
@@ -17,7 +17,7 @@ services:
         condition: service_healthy
     restart: unless-stopped
   mysql:
-    image: mysql-local:1.0.0
+    image: andriis9/mysql-local:1.0.0
     build:
       context: .
       dockerfile: Dockerfile.mysql
